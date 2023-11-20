@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(../images/hero.png);
+    background-image: url("./models/hero shot-Camera.png");
     background-size: cover;
     background-position: center;
     min-height: 14rem;
