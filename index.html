@@ -12,16 +12,19 @@
         <div class="hero"></div>
 
     <div class="modern_chair">
-
-    <model-viewer src="./models/modern_chair.glb"
-              alt="A 3D model of an modern_chair"
-              ar
-              auto-rotate
-              camera-controls></model-viewer>
+              
+    <model-viewer 
+      src="./models/modern_chair.glb"
+      alt="A 3D model of a modern chair"
+      ar
+      auto-rotate
+      camera-controls
+      style="display: none;" 
+      on-load="hideLoadingPoster(event)"></model-viewer>
 
     <div class="loading-poster">
-    <img src="./models/image2_space_adjusted.png" alt="Loading Poster">
-  </div>
+      <img src="./models/image2_space_adjusted.png" alt="Loading Poster">
+    </div>
 
     <h1>Modern chair</h1>
 
@@ -51,5 +54,17 @@
     <h1>Modern desk</h1>
 
     </div>
+
+      <script>
+    function hideLoadingPoster(event) {
+      // Get the model-viewer element
+      const modelViewer = event.target;
+
+      // Once the model is loaded, hide the loading poster and display the model-viewer
+      modelViewer.style.display = 'block';
+      const loadingPoster = document.querySelector('.loading-poster');
+      loadingPoster.style.display = 'none';
+    }
+  </script>
 </body>
 </html>
