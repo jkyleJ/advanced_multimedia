@@ -55,16 +55,19 @@
 
     </div>
 
-      <script>
-    function hideLoadingPoster(event) {
-      // Get the model-viewer element
-      const modelViewer = event.target;
+<script>
+  function hideLoadingPoster(event) {
+    console.log('Model loaded!');
+    // Get the model-viewer element
+    const modelViewer = event.target;
 
-      // Once the model is loaded, hide the loading poster and display the model-viewer
-      modelViewer.style.display = 'block';
-      const loadingPoster = document.querySelector('.loading-poster');
-      loadingPoster.style.display = 'none';
-    }
-  </script>
+    // Once the model is loaded, hide the loading poster and display the model-viewer
+    console.log('Model Viewer:', modelViewer);
+    modelViewer.style.display = 'block';
+    const loadingPoster = document.querySelector('.loading-poster');
+    console.log('Loading Poster:', loadingPoster);
+    loadingPoster.style.display = 'none';
+  }
+</script>
 </body>
 </html>
