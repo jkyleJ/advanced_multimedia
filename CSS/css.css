@@ -7,3 +7,16 @@
     background-position: center;
     min-height: 24rem;
 }
+
+    .loading-poster {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f2f2f2;
+    }
+
+    .loading-poster img {
+      max-width: 100px;
+      max-height: 100px;
+    }
