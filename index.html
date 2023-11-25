@@ -56,18 +56,18 @@
     </div>
 
 <script>
-  function hideLoadingPoster(event) {
-    console.log('Model loaded!');
-    // Get the model-viewer element
-    const modelViewer = event.target;
+  // Wait for the document to fully load
+  document.addEventListener('DOMContentLoaded', function() {
+    const modernChair = document.querySelector('.modern_chair model-viewer');
+    const loadingPoster = document.querySelector('.modern_chair .loading-poster');
 
-    // Once the model is loaded, hide the loading poster and display the model-viewer
-    console.log('Model Viewer:', modelViewer);
-    modelViewer.style.display = 'block';
-    const loadingPoster = document.querySelector('.loading-poster');
-    console.log('Loading Poster:', loadingPoster);
-    loadingPoster.style.display = 'none';
-  }
+    modernChair.addEventListener('loaded', function() {
+      console.log('Model loaded!');
+      modernChair.style.display = 'block';
+      loadingPoster.style.display = 'none';
+    });
+  });
+</script>
 </script>
 </body>
 </html>
